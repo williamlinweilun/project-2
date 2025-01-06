@@ -1,0 +1,27 @@
+@use 'variables' as*;
+@use 'mixins' as*;
+
+
+
+// Dark Mode
+body.dark-mode {
+    background-color: $dark-background;
+    color: $dark-text;
+   
+    .header__top{
+        color: $light-text;
+    }
+
+
+   & svg {
+    fill: white; /* Change to white or any color for dark mode */
+  }
+  a{
+    text-decoration: none;
+    color: $dark-text;
+  }
+
+
+
+}
+
