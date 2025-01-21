@@ -1,0 +1,127 @@
+//styles for bubble comments
+
+@use "mixins" as *;
+
+
+.comment-bubble {
+  @include mobile-desktop {
+    @include bubble-wrapper(relative);
+  }
+
+  @include large-desktop {
+    // you can add the top property for sticky position as a prop. (mixin is at line 44 of mixins.scss)
+    @include bubble-wrapper(sticky); 
+  }
+}
+
+
+.bubble1 {
+  div {
+    @include bubble-style(#e62555);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("left");
+    }
+
+    path {
+      fill: #e62555;
+    }
+  }
+}
+
+.bubble2 {
+  div {
+    @include bubble-style(#0024fd);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("right");
+    }
+
+    path {
+      fill: #0024fd;
+    }
+  }
+}
+
+.bubble3 {
+  div {
+    @include bubble-style(#d99e87);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("left");
+    }
+
+    path {
+      fill: #d99e87;
+    }
+  }
+}
+
+.bubble4 {
+  div {
+    @include bubble-style(#333);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("right");
+    }
+
+    path {
+      fill: #333;
+    }
+  }
+}
+
+.bubble5 {
+  div {
+    @include bubble-style(#0269f0);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("right");
+    }
+
+    path {
+      fill: #0269f0;
+    }
+  }
+}
+
+.bubble6 {
+  div {
+    @include bubble-style(#596b53);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("right");
+    }
+
+    path {
+      fill: #596b53;
+    }
+  }
+}
+
+.bubble7 {
+  div {
+    @include bubble-style(#1dafed);
+  }
+  .bubble-tail {
+    @include tablet-desktop {
+      @include tail-style("left");
+    }
+
+    path {
+      fill: #1dafed;
+    }
+  }
+}
+
+.bubble-tail {
+  @include mobile {
+    @include tail-style("center");
+  }
+}

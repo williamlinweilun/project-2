@@ -15,6 +15,12 @@ letter-spacing: -.05em ;
 text-transform: none;
 }
 
+.bubble-text {
+    display: block;
+    color: $secondary-color;
+    font-size: 13px;
+  }
+
 .work {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
