@@ -533,6 +533,12 @@ body.dark-mode a {
   margin-bottom: 2rem;
 }
 
+body.dark-mode .title,
+body.dark-mode .line-svg,
+body.dark-mode .arrow-svg {
+  filter: invert(1);
+}
+
 @media (min-width: 48rem) {
   .svg-container {
     right: 0;

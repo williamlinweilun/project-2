@@ -40,6 +40,14 @@
     margin-bottom: 2rem;
 }
 
+body.dark-mode {
+    .title, 
+    .line-svg,
+    .arrow-svg {
+        filter: invert(1);
+    }
+}
+
 @media (min-width: 48rem) {
     .svg-container {
         right: 0;
