@@ -464,43 +464,20 @@ body.dark-mode a {
   color: #e0e0e0;
 }
 
-.bubble-wrapper {
-  position: relative;
-  height: 50vh;
-}
-
 @media screen and (max-width: 1023px) {
   .comment-bubble {
     position: relative;
     top: 0;
     padding: 0.25rem;
     margin: 1rem;
-    max-width: 80%;
-    margin: auto;
-    display: block;
-    justify-content: center;
   }
 }
 @media screen and (min-width: 1024px) {
   .comment-bubble {
     position: sticky;
-    top: 10vh;
+    top: 0;
     padding: 0.25rem;
     margin: 1rem;
-    max-width: 20%;
-    margin: auto 1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .bubble-left {
-    justify-self: left;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .bubble-right {
-    justify-self: right;
   }
 }
 

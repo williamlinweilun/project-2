@@ -2,48 +2,18 @@
 
 @use "mixins" as *;
 
-// codes below are for when bubble comments are separated
-// from main content
-.bubble-wrapper {
-  position: relative;
-  height: 50vh;
-}
 
 .comment-bubble {
   @include mobile-desktop {
     @include bubble-wrapper(relative);
-    // codes below are for when bubble comments are separated
-    // from main content
-    max-width: 80%;
-    margin: auto;
-    display: block;
-    justify-content: center
   }
 
   @include large-desktop {
-    @include bubble-wrapper(sticky , 10vh);
-    // codes below are for when bubble comments are separated
-    // from main content
-    max-width: 20%;
-    margin: auto 1rem;
+    // you can add the top property for sticky position as a prop. (mixin is at line 44 of mixins.scss)
+    @include bubble-wrapper(sticky); 
   }
 }
 
-// codes below are for when bubble comments are separated
-// from main content
-.bubble-left {
-  @include large-desktop {
-    justify-self: left;
-  }
-}
-
-// codes below are for when bubble comments are separated
-// from main content
-.bubble-right{
-  @include large-desktop {
-   justify-self: right;
-  }
-}
 
 .bubble1 {
   div {
