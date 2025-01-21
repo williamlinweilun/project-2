@@ -21,7 +21,7 @@
 .svg-container {
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -38,4 +38,31 @@
     height: auto;
     margin-right: 9.6rem;
     margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+    .svg-container {
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (min-width: 64rem) {
+
+    .svg-container {
+        margin-right: 6rem;
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (min-width: 80rem) {
+    
+    .line-svg {
+        width: 140px;
+    }
+
+    .arrow-svg {
+        margin-right: 12.1rem;
+    }
 }
