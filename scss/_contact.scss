@@ -1,0 +1,86 @@
+
+.contact {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 9rem;
+}
+
+.contact p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.contact a {
+    font-size: 1.2rem;
+    color: #000000;
+    text-decoration: none; 
+    position: relative; 
+}
+
+@media (min-width: 48em) {
+    .contact p {
+        font-size: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 90em) {
+    .contact p { 
+        font-size: 4rem;
+        margin-top: 20rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact {
+        margin-bottom: 18rem;
+    }
+    
+    .contact a {
+        font-size: 2rem;
+    }
+}
+
+.contact a:active {
+    text-decoration: none;
+}
+
+.contact a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1); 
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    background-color: #000000; 
+    transition: transform 0.25s ease-out;
+    transform-origin: bottom left;
+}
+
+.contact a:hover::after {
+    animation: run-through 0.5s ease-out;
+}
+
+body.dark-mode .contact a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@keyframes run-through {
+    0% {
+        transform: scaleX(1);
+        background-color: #fff; 
+    }
+    50% {
+        transform: scaleX(0);
+        background-color: #000; 
+    }
+    100% {
+        transform: scaleX(1);
+        background-color: #fff; 
+    }   
+}
+
