@@ -1,10 +1,11 @@
 // _variables.scss
 
 //fonts
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+@import url('https://fonts.googleapis.com/css2?family=UTM+Times&display=swap');
 
-$primary-font:"Haas", system-ui, sans-serif;;
-$secondary-font:"Times Dot", serif;
-
+$primary-font: 'Neue Haas Grotesk Display Pro 65 Medium', sans-serif;
+$secondary-font: "UTM Times", serif;
 
 // Variables
 $primary-color: #333;
