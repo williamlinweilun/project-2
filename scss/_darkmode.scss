@@ -21,7 +21,9 @@ body.dark-mode {
     color: $dark-text;
   }
 
-
+  .underline-hover::after {
+    background-color: $dark-text;
+  }
 
 }
 
