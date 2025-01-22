@@ -1,0 +1,42 @@
+// styles for footer
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+
+    .hidden-footer {
+        display: none;
+        @media screen and (min-width: 40rem) {
+            display: block;
+        }
+    }
+
+    .underline-hover{
+        display: inline-block;
+        position: relative;
+    }
+
+    .underline-hover::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transition: transform 0.25s ease-out;
+        transform-origin: bottom right;
+    }
+
+    .underline-hover:hover::after {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+    }
+
+    .underline-hover:active::after {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+    }
+}
