@@ -390,6 +390,20 @@ h1, h2, h3 {
     margin-top: -15rem;
   }
 }
+footer {
+  font-weight: 650;
+  font-size: 0.9375rem;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+footer .underline-hover {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Haas", system-ui, sans-serif;
+}
+
 .header__top {
   background-color: #00ff01;
   display: block;
@@ -504,6 +518,9 @@ body.dark-mode a {
   text-decoration: none;
   color: #e0e0e0;
 }
+body.dark-mode .underline-hover::after {
+  background-color: #e0e0e0;
+}
 
 .hero {
   height: 100%;
@@ -572,6 +589,7 @@ body.dark-mode .arrow-svg {
     margin-right: 12.1rem;
   }
 }
+
 .bubble-grid1,
 .bubble-grid2 {
   height: 11rem;
@@ -582,12 +600,14 @@ body.dark-mode .arrow-svg {
   top: 10px;
 }
 
+
 @media screen and (max-width: 1023px) {
   .comment-bubble {
     position: relative;
     top: 0;
     padding: 0rem;
     margin: 0rem;
+
   }
 }
 @media screen and (min-width: 1024px) {
@@ -619,7 +639,6 @@ body.dark-mode .arrow-svg {
 .bubble1 .bubble-tail path {
   fill: #e62555;
 }
-
 .bubble2 {
   grid-column: 2/span 5;
 }
@@ -640,6 +659,45 @@ body.dark-mode .arrow-svg {
 .bubble2 .bubble-tail path {
   fill: #0024fd;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+footer .hidden-footer {
+  display: none;
+}
+@media screen and (min-width: 40rem) {
+  footer .hidden-footer {
+    display: block;
+  }
+}
+footer .underline-hover {
+  display: inline-block;
+  position: relative;
+}
+footer .underline-hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
+}
+footer .underline-hover:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+footer .underline-hover:active::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
 
 .bubble3 {
   grid-column: span 5;
